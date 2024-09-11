@@ -27,8 +27,8 @@ export default function Home() {
     if (current.weight > otherObj.weight) { 
       console.log("Winner winner chicken dinner!!!!");
       // console.log(await getPokemon())
-      let newPokemon = [...data, await getPokemon()];
-      newPokemon.splice(other, 1);
+      let newPokemon = [await getPokemon(), await getPokemon()];
+      // newPokemon.splice(other, 1);
       setData(newPokemon);
       setCounter(counter + 1);
     }
